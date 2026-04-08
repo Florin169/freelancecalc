@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="bg-indigo-600 p-1.5 rounded-lg text-white">
             <Calculator size={20} />
           </div>
-          FREELANCE<span className="text-indigo-600">CALC</span>
+          CALCULATE<span className="text-indigo-600">FREELANCE</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-600 uppercase tracking-widest">

@@ -7,11 +7,11 @@ import Link from 'next/link'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FreelanceCalc | Professional US Freelance Tax Calculator",
+  title: "CalculateFreelance | Professional US Freelance Tax Calculator",
   description: "The most accurate 1099 vs W2 and freelance tax calculator for 2026. Calculate SE tax, QBI, and federal brackets.",
   alternates: {
     languages: {
-      'en-US': 'https://freelancecalc.com',
+      'en-US': 'https://CalculateFreelance.com',
     },
   },
 };
