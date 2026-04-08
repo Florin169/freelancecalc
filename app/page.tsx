@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* Final SEO Trust Section */}
       <section className="max-w-3xl mx-auto px-6 mt-20 text-center border-t border-slate-200 pt-20">
-        <h2 className="text-xl font-bold text-slate-800 mb-4">Why Freelancers Trust FreelanceCalc</h2>
+        <h2 className="text-xl font-bold text-slate-800 mb-4">Why Freelancers Trust CalculateFreelance</h2>
         <p className="text-slate-500 leading-relaxed italic">
           "Most tax calculators are built for W2 employees. We built this specifically for the 1099 economy, 
           incorporating the 2026 QBI deduction and Self-Employment tax adjustments that TurboTax 

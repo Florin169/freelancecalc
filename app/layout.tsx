@@ -31,7 +31,7 @@ export default function RootLayout({
         <footer className="bg-slate-900 text-slate-400 py-12 px-6 mt-20">
            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
              <div>
-               <p className="font-bold text-white mb-4 italic underline underline-offset-4 decoration-indigo-500">FreelanceCalc</p>
+               <p className="font-bold text-white mb-4 italic underline underline-offset-4 decoration-indigo-500">CalculateFreelance</p>
                <p className="text-sm">Helping independent professionals navigate the 2026 US Tax landscape with precision.</p>
              </div>
              <div>
