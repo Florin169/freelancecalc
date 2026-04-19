@@ -1,4 +1,5 @@
 import ComparisonTool from '@/components/ComparisonTool';
+import FAQ from '@/app/components/FAQ'
 
 export const metadata = {
   title: '1099 vs W2 Calculator | Freelance vs Salary Comparison',
@@ -18,6 +19,7 @@ export default function ComparePage() {
       </div>
       
       <ComparisonTool />
+      <FAQ />
 
       <section className="max-w-3xl mx-auto mt-20 prose prose-slate">
         <h2>Why 1099 Rates Must Be Higher</h2>
