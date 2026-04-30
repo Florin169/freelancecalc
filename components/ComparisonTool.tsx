@@ -5,6 +5,7 @@ import { ArrowRight, Briefcase, UserCheck } from 'lucide-react';
 
 export default function ComparisonTool() {
   const [w2Salary, setW2Salary] = useState(80000);
+  const [w2Display, setW2Display] = useState("80000");
   
   // W2 simple math (estimating 25% total tax hit for W2)
   const w2Net = w2Salary * 0.75;
@@ -12,6 +13,15 @@ export default function ComparisonTool() {
   // Logic: Find the 1099 Gross that results in the same Net
   const needed1099Gross = w2Salary * 1.35;
   const freelanceResults = calculateFreelanceTax(needed1099Gross, 5000);
+
+  const handleW2Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    setW2Display(raw);
+    const num = Number(raw);
+    if (raw === "" || (!isNaN(num) && raw !== "")) {
+      setW2Salary(raw === "" ? 0 : num);
+    }
+  };
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -27,8 +37,8 @@ export default function ComparisonTool() {
           {/* Changed text-slate-900 to text-white and bg-transparent to ensure no white background */}
           <input 
             type="number" 
-            value={w2Salary} 
-            onChange={(e) => setW2Salary(Number(e.target.value))}
+            value={w2Display}
+            onChange={handleW2Change}
             className="w-full text-4xl font-black text-white bg-transparent border-none focus:ring-0 p-0 mb-2 outline-none"
           />
           {/* Changed border-t to border-zinc-800 and text colors to zinc variants */}

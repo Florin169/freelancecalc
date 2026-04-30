@@ -6,11 +6,31 @@ import { DollarSign, Wallet, Percent, PieChart, Info } from 'lucide-react';
 export default function TaxCalculator({ industry = "Freelancer" }) {
   const [gross, setGross] = useState(85000);
   const [expenses, setExpenses] = useState(5000);
+  const [grossDisplay, setGrossDisplay] = useState("85000");
+  const [expensesDisplay, setExpensesDisplay] = useState("5000");
   const [results, setResults] = useState<any>(null);
 
   useEffect(() => {
     setResults(calculateFreelanceTax(gross, expenses));
   }, [gross, expenses]);
+
+  const handleGrossChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    setGrossDisplay(raw);
+    const num = Number(raw);
+    if (raw === "" || (!isNaN(num) && raw !== "")) {
+      setGross(raw === "" ? 0 : num);
+    }
+  };
+
+  const handleExpensesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    setExpensesDisplay(raw);
+    const num = Number(raw);
+    if (raw === "" || (!isNaN(num) && raw !== "")) {
+      setExpenses(raw === "" ? 0 : num);
+    }
+  };
 
   if (!results) return null;
 
@@ -27,14 +47,18 @@ export default function TaxCalculator({ industry = "Freelancer" }) {
           {/* Changed bg-indigo-100 to bg-zinc-800 */}
           <input 
             type="range" min="0" max="500000" step="500"
-            value={gross} onChange={(e) => setGross(Number(e.target.value))}
+            value={gross} onChange={(e) => {
+              const num = Number(e.target.value);
+              setGross(num);
+              setGrossDisplay(String(num));
+            }}
             className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
           />
           <div className="mt-4 relative">
             {/* Changed text-slate-400 to text-zinc-500 */}
             <span className="absolute left-3 top-2 text-zinc-500">$</span>
             <input 
-              type="number" min="0" value={gross} onChange={(e) => setGross(Number(e.target.value))}
+              type="number" min="0" value={grossDisplay} onChange={handleGrossChange}
               /* Changed bg-slate-50 to bg-zinc-950, border-slate-200 to border-zinc-800, and text-indigo-600 to text-indigo-400 */
               className="w-full pl-8 pr-4 py-2 bg-zinc-950 border border-zinc-800 rounded-lg font-bold text-xl text-indigo-400 outline-none focus:border-indigo-500 transition-colors"
             />
@@ -47,7 +71,7 @@ export default function TaxCalculator({ industry = "Freelancer" }) {
             Annual Business Expenses
           </label>
           <input 
-            type="number" value={expenses} onChange={(e) => setExpenses(Number(e.target.value))}
+            type="number" value={expensesDisplay} onChange={handleExpensesChange}
             /* Changed bg-slate-50 to bg-zinc-950, border-slate-200 to border-zinc-800, and text-slate-700 to text-zinc-100 */
             className="w-full px-4 py-2 bg-zinc-950 border border-zinc-800 rounded-lg font-medium text-zinc-100 outline-none focus:border-indigo-500 transition-colors"
             placeholder="Software, gear, office..."
