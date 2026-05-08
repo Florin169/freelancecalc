@@ -108,7 +108,9 @@ export default function Home() {
       </section>
 
       {/* Tax Guide Accordion */}
-      <TaxGuideAccordion />
+      <div className="max-w-4xl mx-auto px-4">
+        <TaxGuideAccordion />
+      </div>
     </main>
   );
 }
