@@ -107,6 +107,35 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Quick Links Hub */}
+      <section className="max-w-4xl mx-auto px-4 mt-12">
+        <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-2xl p-6 backdrop-blur-sm text-center">
+          <p className="text-zinc-400 text-sm mb-4">Looking for something specific?</p>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-medium">
+            <Link 
+              href="/1099-tax-calculator" 
+              className="text-indigo-400 hover:text-white transition-colors"
+            >
+              1099 Estimator
+            </Link>
+            <span className="text-zinc-600">•</span>
+            <Link 
+              href="/llc-tax-calculator" 
+              className="text-indigo-400 hover:text-white transition-colors"
+            >
+              LLC Savings
+            </Link>
+            <span className="text-zinc-600">•</span>
+            <Link 
+              href="/compare/1099-vs-w2" 
+              className="text-indigo-400 hover:text-white transition-colors"
+            >
+              W2 vs 1099 Compare
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Tax Guide Accordion */}
       <div className="max-w-4xl mx-auto px-4">
         <TaxGuideAccordion />

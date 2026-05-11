@@ -18,8 +18,14 @@ type TaxResults = {
   salary?: number;
 };
 
-export default function TaxCalculator({ industry = "Freelancer" }) {
-  const [activeTool, setActiveTool] = useState<Tool>('freelance');
+export default function TaxCalculator({ 
+  defaultMode = 'freelance',
+  showSeBreakdown = false,
+}: {
+  defaultMode?: Tool;
+  showSeBreakdown?: boolean;
+}) {
+  const [activeTool, setActiveTool] = useState<Tool>(defaultMode);
 
   const [gross, setGross] = useState(85000);
   const [expenses, setExpenses] = useState(5000);

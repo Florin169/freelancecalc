@@ -2,27 +2,44 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const industries = ['graphic-designer', 'video-editor', 'web-developer', 'copywriter', 'social-media-manager'];
-  
+
+  // Static power pages and tool routes
+  const toolRoutes = [
+    {
+      url: 'https://CalculateFreelance.com/1099-tax-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://CalculateFreelance.com/llc-tax-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://CalculateFreelance.com/compare/1099-vs-w2',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+  ];
+
   const industryUrls = industries.map((ind) => ({
     url: `https://CalculateFreelance.com/calculator/${ind}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
   }));
 
   return [
     {
       url: 'https://CalculateFreelance.com',
       lastModified: new Date(),
-      changeFrequency: 'yearly' as const,
-      priority: 1,
+      changeFrequency: 'weekly' as const,
+      priority: 1.0,
     },
-    {
-      url: 'https://CalculateFreelance.com/compare/1099-vs-w2',
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
+    ...toolRoutes,
     ...industryUrls,
   ]
 }
