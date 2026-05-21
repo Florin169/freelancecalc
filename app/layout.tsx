@@ -15,6 +15,9 @@ export const metadata: Metadata = {
       'en-US': 'https://CalculateFreelance.com',
     },
   },
+  other: {
+    'impact-site-verification': 'ef59809d-007f-4ef3-91f8-e72f566349e6', // Replace with your real code
+  },
 };
 
 export default function RootLayout({
