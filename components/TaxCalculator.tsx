@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { calculateFreelanceTax, calculateSCorpTax } from '@/lib/tax-logic';
-import { DollarSign, Info, Building2, User, TrendingDown } from 'lucide-react';
+import { DollarSign, Info, Building2, User, TrendingDown, ArrowRight, Shield, Zap } from 'lucide-react';
 
 type Tool = 'freelance' | 'llc';
 
@@ -96,6 +96,86 @@ export default function TaxCalculator({
       {sub && <p className="text-zinc-500 text-xs mt-1">{sub}</p>}
     </div>
   );
+
+  // ZenBusiness affiliate card — shown in both modes with context-aware messaging
+  const ZenBusinessCard = () => {
+    const isLLCMode = activeTool === 'llc';
+
+    // In freelance mode: estimate potential savings if they formed an LLC
+    const freelanceResults = calculateFreelanceTax(gross, expenses);
+    const potentialSavings = isLLCMode
+      ? savings
+      : Math.max(0, freelanceResults.totalTax - calculateSCorpTax(gross, expenses, Math.round(gross * 0.5)).totalTax);
+
+    const showSavings = potentialSavings > 500;
+
+    return (
+      <motion.a
+        href="https://www.awin1.com/cread.php?awinmid=102801&awinaffid=2904013&ued=https%3A%2F%2Fwww.zenbusiness.com%2Fshop%2Fllc%2Fbusiness-state"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.15 }}
+        className="group block mt-4"
+      >
+        <div className="relative overflow-hidden rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-950/60 via-zinc-900/80 to-zinc-950/60 p-4 transition-all duration-300 hover:border-indigo-400/40 hover:shadow-[0_0_20px_rgba(99,102,241,0.12)]">
+          {/* Background glow */}
+          <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-indigo-500/10 blur-2xl" />
+
+          {/* Sponsored label */}
+          <p className="mb-3 text-[9px] font-bold uppercase tracking-widest text-zinc-600">Sponsored</p>
+
+          <div className="flex items-start justify-between gap-3">
+            <div className="flex-1 min-w-0">
+              {/* Headline changes based on mode */}
+              <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-1">
+                {isLLCMode ? 'Form Your LLC Today' : 'Unlock These Savings'}
+              </p>
+              <p className="text-sm font-semibold text-zinc-100 leading-snug">
+                {isLLCMode
+                  ? 'ZenBusiness makes S-Corp formation fast and simple'
+                  : 'Form an LLC with ZenBusiness and keep more of what you earn'}
+              </p>
+
+              {/* Dynamic savings callout */}
+              {showSavings && (
+                <div className="mt-2.5 inline-flex items-center gap-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1">
+                  <TrendingDown size={11} className="text-emerald-400 shrink-0" />
+                  <span className="text-xs font-bold text-emerald-300">
+                    {isLLCMode
+                      ? `You're saving ~$${potentialSavings.toLocaleString(undefined, { maximumFractionDigits: 0 })} vs sole prop`
+                      : `Potentially save ~$${potentialSavings.toLocaleString(undefined, { maximumFractionDigits: 0 })} / year`}
+                  </span>
+                </div>
+              )}
+
+              {/* Feature pills */}
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {['$0 + state fee', 'Fast filing', 'Registered agent'].map((f) => (
+                  <span key={f} className="inline-flex items-center gap-1 rounded-md bg-white/5 border border-white/10 px-2 py-0.5 text-[10px] font-medium text-zinc-400">
+                    <Zap size={9} className="text-indigo-400" />
+                    {f}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA arrow */}
+            <div className="shrink-0 mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500/10 border border-indigo-500/20 transition-all duration-300 group-hover:bg-indigo-500/20 group-hover:scale-110">
+              <ArrowRight size={14} className="text-indigo-400 transition-transform duration-300 group-hover:translate-x-0.5" />
+            </div>
+          </div>
+
+          {/* Bottom trust line */}
+          <div className="mt-3 flex items-center gap-1.5 border-t border-white/5 pt-3">
+            <Shield size={10} className="text-zinc-600 shrink-0" />
+            <p className="text-[10px] text-zinc-600">Trusted by 700,000+ businesses · As seen on Forbes</p>
+          </div>
+        </div>
+      </motion.a>
+    );
+  };
 
   return (
     <>
@@ -303,6 +383,9 @@ export default function TaxCalculator({
               </div>
             </div>
 
+            {/* ZenBusiness Affiliate Card */}
+            <ZenBusinessCard />
+
             {/* Footer Note */}
             <div className="mt-6 pt-6 border-t border-zinc-800/60 text-center">
               <p className="text-[10px] text-zinc-600 font-mono leading-relaxed">
@@ -312,6 +395,11 @@ export default function TaxCalculator({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Affiliate Card (shown below calculator on mobile) */}
+      <div className="lg:hidden mt-4 pb-24">
+        <ZenBusinessCard />
       </div>
 
       {/* Mobile Sticky Bottom Bar */}
