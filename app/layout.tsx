@@ -3,20 +3,16 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Link from 'next/link'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CalculateFreelance | Professional US Freelance Tax Calculator",
-  description: "The most accurate 1099 vs W2 and freelance tax calculator for 2026. Calculate SE tax, QBI, and federal brackets.",
+  title: 'Freelance Tax Calculator 2025–2026 | 1099 & Self-Employment Tax',
+  description: 'Free freelance tax calculator for 1099 contractors and self-employed workers. Estimate federal, state, and self-employment taxes for 2025–2026. Includes LLC savings and W2 comparison tools.',
   alternates: {
     languages: {
-      'en-US': 'https://CalculateFreelance.com',
+      'en-US': 'https://calculatefreelance.com',
     },
-  },
-  other: {
-    'impact-site-verification': 'ef59809d-007f-4ef3-91f8-e72f566349e6', // Replace with your real code
   },
 };
 
@@ -68,7 +64,6 @@ export default function RootLayout({
                </p>
              </div>
            </div>
-           <GoogleAnalytics gaId="G-7SH9LL4VNG" />
         </footer>
       </body>
     </html>

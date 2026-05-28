@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'W2 vs. 1099 Calculator: Compare Salary vs. Freelance Pay',
-  description: 'Determine your 1099 equivalent hourly rate and true take-home pay after self-employment taxes, healthcare, and business expenses.',
+  title: 'W2 vs 1099 Calculator 2025–2026 | Compare Take-Home Pay',
+  description: 'Free W2 vs 1099 calculator. See your true take-home pay after self-employment taxes, benefits, and deductions. Find out exactly what 1099 rate matches your W2 salary.',
 };
 
 export default function ComparePage() {
@@ -52,17 +52,27 @@ export default function ComparePage() {
             {
               id: '1099-vs-w2',
               title: 'Is 1099 better than W2?',
-              content: `The choice between W2 and 1099 involves significant trade-offs. W2 employment offers stability, predictable income, and employer-paid taxes (covering 7.65% of FICA). In contrast, 1099 freelancing offers higher gross pay and massive tax deductions for business expenses, software, and home offices. However, the freelancer must pay both halves of the 15.3% Self-Employment tax and cover their own health insurance. The "best" option depends entirely on your risk tolerance, desired income, and ability to manage business logistics.`,
+              content: `The choice between W2 and 1099 involves significant trade-offs. W2 employment offers stability, predictable income, and employer-paid taxes — your employer covers 7.65% of FICA on your behalf. 1099 freelancing offers higher gross pay and deductions for business expenses, software, and home offices, but you pay both halves of the 15.3% Self-Employment tax and cover your own health insurance. The best option depends on your risk tolerance, desired income, and ability to manage business logistics.`,
+            },
+            {
+              id: 'more-taxes',
+              title: 'Do you pay more taxes on 1099 or W2?',
+              content: `1099 contractors generally pay more in total taxes than W2 employees at the same gross income. As a W2 employee, your employer pays half of your Social Security and Medicare taxes (7.65%). As a 1099 contractor, you pay both halves — 15.3% total. However, 1099 contractors can deduct business expenses, home office costs, health insurance premiums, and half of their SE tax bill, which can significantly reduce taxable income. Whether you end up paying more depends on how aggressively you track deductions.`,
             },
             {
               id: 'freelance-premium',
-              title: 'The "Freelance Premium" Rule',
-              content: `Industry experts advise that a fair 1099 hourly rate should be roughly 30% higher than an equivalent W2 salary to account for the lack of employer benefits and the double-sided Social Security tax. If a W2 job pays $30/hr, a freelancer should aim for at least $39/hr to break even—and higher to truly profit. This "Freelance Premium" ensures you aren't taking a pay cut for the flexibility of self-employment.`,
+              title: 'How do I convert a W2 rate to a 1099 rate?',
+              content: `The standard formula: take your W2 hourly rate and multiply by 1.3 to 1.4 to get a fair 1099 equivalent. For example, a $40/hr W2 rate should translate to $52–$56/hr as a 1099 contractor. This 30–40% premium covers the employer FICA contribution you now pay yourself, unpaid time off, and benefits you must purchase independently. Use the calculator above to run the exact numbers for your situation.`,
             },
             {
               id: 'hidden-costs',
-              title: 'Hidden Costs of Freelancing',
-              content: `Before switching to 1099, calculate the full cost of being your own boss. Key hidden costs include health insurance premiums (often $5,000-$10,000/year), the full 15.3% Self-Employment tax obligation, and the cost of "unpaid" vacation days. If you take two weeks off, that's two weeks of zero income. These factors make the W2 vs. 1099 decision much more complex than simply comparing gross numbers.`,
+              title: 'Hidden costs of switching from W2 to 1099',
+              content: `Before switching, calculate the full cost of being your own employer. Health insurance premiums typically run $5,000–$10,000 per year for an individual. You lose employer-sponsored retirement matching. Two weeks of vacation now means two weeks of zero income. And quarterly estimated tax payments require discipline — missing them triggers IRS underpayment penalties. These factors make the W2 vs 1099 decision much more complex than comparing gross numbers alone.`,
+            },
+            {
+              id: 'hourly-difference',
+              title: 'What is the difference between a 1099 and W2 hourly rate?',
+              content: `At the same hourly rate, a W2 employee takes home more than a 1099 contractor because the employer absorbs half the payroll tax. At $50/hr, a W2 employee effectively receives an additional $3.83/hr in employer FICA contributions that never appear on their paycheck. A 1099 contractor at $50/hr pays that $3.83 themselves on top of the employee portion. This is why comparing gross hourly rates between W2 and 1099 roles is misleading — the calculator above converts both to true take-home figures.`,
             },
           ]} 
         />
@@ -94,7 +104,7 @@ export default function ComparePage() {
       {/* Footer Note */}
       <div className="max-w-4xl mx-auto px-4 mt-12 text-center">
         <p className="text-xs text-zinc-600 font-mono">
-          ESTIMATES BASED ON 2026 TAX LAW • FOR EDUCational PURPOSES ONLY
+          ESTIMATES BASED ON 2026 TAX LAW • FOR educational PURPOSES ONLY
         </p>
       </div>
     </main>

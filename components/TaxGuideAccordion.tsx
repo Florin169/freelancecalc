@@ -22,44 +22,21 @@ interface TaxGuideAccordionProps {
 const defaultAccordionData: AccordionItem[] = [
   {
     id: 'self-employed',
-    title: 'Self-Employed Tax Estimator: Navigating 1099 Obligations',
+    title: 'How does self-employment tax work for 1099 contractors?',
     icon: <Briefcase size={18} />,
-    content: `
-      Understanding your "Take-Home Pay" starts with demystifying the self employed tax calculator logic.
-      Unlike W2 employees, freelancers are responsible for both the employer and employee portions of FICA,
-      totaling a 15.3% Self-Employment (SE) tax. This is calculated on 92.35% of your net earnings.
-      Using a dedicated 1099 tax estimator allows you to set aside the correct amount for quarterly estimated
-      payments, ensuring you avoid underpayment penalties when filing with the IRS.
-    `,
+    content: `W2 employees split Social Security and Medicare taxes with their employer — each pays 7.65%. As a 1099 contractor, you pay both halves yourself, totaling 15.3%. This is calculated on 92.35% of your net earnings (the IRS allows a small adjustment). The good news: you can deduct half of your SE tax bill when calculating your adjusted gross income, which reduces your federal income tax. At $60,000 net income, that deduction saves you roughly $1,300–$1,600 depending on your bracket.`,
   },
   {
     id: 'llc-vs-sole',
-    title: 'LLC vs. Sole Proprietor: Which saves you more?',
+    title: 'LLC vs. sole proprietor: which saves more in taxes?',
     icon: <BookOpen size={18} />,
-    content: `
-      Choosing between business structures is more than just a legal decision—it is a tax strategy.
-
-      Sole Proprietorship: The default for most freelancers. It's simple but subjects all business profits
-      to the 15.3% SE tax.
-
-      LLC with S-Corp Election: Our LLC tax calculator highlights the primary benefit of the S-Corp:
-      "Salary Splitting." By paying yourself a "Reasonable Salary," you only pay SE tax on that portion.
-      The remaining profit (distributions) is exempt from the 15.3% tax, potentially saving you thousands annually.
-    `,
+    content: `As a sole proprietor, you pay 15.3% self-employment tax on every dollar of profit. An LLC taxed as an S-Corp lets you split your income into a salary and distributions. You pay SE tax only on the salary portion — distributions are exempt. For example, if your LLC earns $120,000 and you pay yourself an $80,000 salary, you only pay SE tax on $80,000 instead of the full $120,000, saving roughly $6,000. This strategy becomes worthwhile when net profit consistently exceeds $60,000–$70,000, because S-Corp administration adds roughly $1,500–$3,000 in annual costs.`,
   },
   {
     id: 'deductions',
-    title: 'Maximizing Your Freelance Deductions',
+    title: 'Which deductions do most freelancers miss?',
     icon: <Lightbulb size={18} />,
-    content: `
-      To lower your taxable income, you must track all "ordinary and necessary" business expenses.
-      Common deductions for 1099 contractors include:
-
-      Home Office: A portion of your rent/mortgage and utilities.
-      Software & Tools: Subscriptions like Adobe Creative Cloud, GitHub, or SEO utilities.
-      Health Insurance: Premiums paid for yourself and your family are often 100% deductible.
-      Marketing: Costs for your website, ads, and professional branding.
-    `,
+    content: `The most commonly missed deduction is the home office deduction — if you use a dedicated space for work, a proportional share of your rent, mortgage interest, and utilities is deductible. Beyond that: health insurance premiums are often 100% deductible for self-employed workers, software subscriptions and equipment are fully deductible as business expenses, and business-related travel including mileage is deductible at the IRS standard rate. Every dollar in deductions reduces your net profit, which directly lowers both your income tax and your self-employment tax.`,
   },
 ];
 

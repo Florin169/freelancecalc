@@ -3,6 +3,11 @@ import TaxGuideAccordion from '@/components/TaxGuideAccordion';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
+export const metadata = {
+  title: 'LLC Tax Calculator 2025–2026 | S-Corp vs Sole Proprietorship Savings',
+  description: 'Calculate how much you save in self-employment taxes by electing S-Corp status for your LLC. Free calculator for freelancers and contractors. Updated for 2026 tax brackets.',
+};
+
 export default function LLCPage() {
   return (
     <main className="bg-black text-zinc-50 min-h-screen pb-20 antialiased">
@@ -81,6 +86,11 @@ export default function LLCPage() {
               id: 'reasonable-salary',
               title: 'What is a "Reasonable Salary" for the IRS?',
               content: `The IRS requires that S-Corp owners pay themselves what a typical employee in their field would earn for similar work. Factors include your industry, location, experience, and hours worked. Paying yourself $0 or an unreasonably low salary to avoid SE tax is a major red flag for audits. Research salary data on sites like Glassdoor or the Bureau of Labor Statistics to justify your number.`,
+            },
+            {
+              id: 'llc-costs',
+              title: 'What does it actually cost to form and run an LLC?',
+              content: `Forming an LLC typically costs $50–$500 in state filing fees depending on your state — California is the most expensive at $70 to file plus an $800 annual franchise tax. Beyond formation, running an S-Corp LLC adds ongoing costs: payroll software ($500–$1,500/year), an accountant or CPA for the S-Corp election and annual tax return ($1,000–$3,000/year), and quarterly payroll tax filings. This is why the $60,000–$70,000 profit threshold matters — below it, these costs can easily cancel out your SE tax savings.`,
             },
           ]} 
         />

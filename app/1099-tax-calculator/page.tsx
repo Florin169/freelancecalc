@@ -2,6 +2,12 @@ import TaxCalculator from '@/components/TaxCalculator';
 import TaxGuideAccordion from '@/components/TaxGuideAccordion';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '1099 Tax Calculator 2025–2026 | Freelancer & Contractor Tax Estimator',
+  description: 'Free 1099 tax calculator for freelancers and contractors. Estimate your 2025–2026 federal, state, and self-employment taxes in seconds. See exactly what you owe and what deductions lower your bill.',
+};
 
 export default function Tax1099Page() {
   return (
@@ -24,12 +30,12 @@ export default function Tax1099Page() {
         
         <div className="relative max-w-4xl mx-auto text-center px-6 py-12 md:py-24">
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1.1]">
-            1099 Tax Calculator & <br />
+            1099 Tax Calculator 2025–2026 & <br />
             <span className="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">Self-Employment Tax Estimator</span>
           </h1>
           
           <p className="text-zinc-400 text-lg md:text-xl mt-6 max-w-2xl mx-auto leading-relaxed font-light">
-            Calculate your 1099 net income after Federal, State, and Self-Employment (FICA) taxes. Updated for 2026 tax brackets.
+            Find out exactly how much you&rsquo;ll owe in Federal, State, and Self-Employment taxes — and what deductions can lower your bill. Updated for 2026 tax brackets.
           </p>
         </div>
       </section>
@@ -69,18 +75,33 @@ export default function Tax1099Page() {
           customData={[
             {
               id: 'how-calculated',
-              title: 'How is 1099 Tax Calculated?',
-              content: `1099 income is subject to both standard Income Tax and the 15.3% Self-Employment tax. The good news is that you only pay tax on your Net Profit, which is your total income minus your legitimate business expenses. Using a 1099 tax estimator like this one helps you plan for quarterly payments and avoid year-end surprises.`,
+              title: 'How is 1099 tax calculated?',
+              content: `1099 income is subject to both standard Income Tax and the 15.3% Self-Employment tax. You only pay tax on your Net Profit — your total income minus legitimate business expenses. For example, if you earn $80,000 but have $15,000 in deductions, you only pay tax on $65,000.`,
             },
             {
               id: 'tax-rate-2026',
-              title: 'What is the 1099 Tax Rate for 2026?',
-              content: `The Self-Employment tax rate for 2026 consists of 12.4% for Social Security and 2.9% for Medicare, totaling 15.3%. The Social Security portion applies only up to the 2026 wage base limit, while the Medicare portion applies to all earnings. High earners may also be subject to an additional 0.9% Medicare surtax.`,
+              title: 'What is the 1099 tax rate in 2026?',
+              content: `The Self-Employment tax rate for 2026 is 15.3% — 12.4% for Social Security and 2.9% for Medicare. The Social Security portion applies only up to the 2026 wage base limit; Medicare applies to all earnings. High earners pay an additional 0.9% Medicare surtax above $200,000.`,
+            },
+            {
+              id: 'set-aside-30',
+              title: 'Why do people say to set aside 30% for 1099 taxes?',
+              content: `The 30% rule of thumb comes from combining two tax obligations: roughly 15.3% in Self-Employment tax plus approximately 15% in federal income tax for a median earner. That adds up to around 30% of net income. Your actual number depends on your income level, state, and deductions — use the calculator above for a precise figure.`,
             },
             {
               id: 'common-deductions',
-              title: 'Common 1099 Deductions to Lower Your Bill',
-              content: `To lower your taxable income, track all ordinary and necessary business expenses. Common deductions include software subscriptions, home office space, professional equipment, and health insurance premiums. Additionally, you can deduct 50% of your self-employment tax when calculating your adjusted gross income, which helps offset the FICA tax burden.`,
+              title: 'Common 1099 deductions to lower your bill',
+              content: `The biggest deduction most freelancers miss is the home office deduction. Beyond that, track software subscriptions, professional equipment, health insurance premiums, and business travel. You can also deduct half of your self-employment tax bill when calculating adjusted gross income — at $50,000 net income that saves you roughly $1,100–$1,500. Every deduction reduces the income the calculator taxes you on.`,
+            },
+            {
+              id: 'six-hundred-rule',
+              title: 'What is the $600 rule for 1099?',
+              content: `If a client pays you $600 or more in a calendar year, they are required to send you a 1099-NEC form reporting that income to the IRS. You owe tax on all self-employment income regardless of whether you receive a 1099 — the form is just a reporting mechanism, not a threshold for owing taxes.`,
+            },
+            {
+              id: 'set-aside-amount',
+              title: 'How much should I set aside for taxes as a 1099 contractor?',
+              content: `A safe starting point is 25–30% of your net income after deductions. If you are in a higher income bracket or a high-tax state, lean toward 30–35%. Use the calculator above to get your specific number, then divide by four for quarterly estimated tax payments.`,
             },
           ]} 
         />

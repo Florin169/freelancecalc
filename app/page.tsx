@@ -3,6 +3,11 @@ import TaxGuideAccordion from '@/components/TaxGuideAccordion';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Zap, BarChart3 } from 'lucide-react';
 
+export const metadata = {
+  title: 'Freelance Tax Calculator 2025–2026 | 1099 Self-Employment Tax Estimator',
+  description: 'Calculate your exact 1099 take-home pay after federal, state, and self-employment taxes. Free tool for freelancers and independent contractors. Updated for 2026 tax brackets.',
+};
+
 export default function Home() {
   const topIndustries = [
     { name: 'Video Editor', slug: 'video-editor' },
