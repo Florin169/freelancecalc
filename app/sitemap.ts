@@ -40,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     ...toolRoutes,
+    {
+      url: 'https://calculatefreelance.com/guides/w2-vs-1099',
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     ...industryUrls,
   ]
 }

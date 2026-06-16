@@ -44,6 +44,18 @@ export default function ComparePage() {
         <ComparisonTool />
       </div>
 
+      {/* Guide Link */}
+      <div className="max-w-4xl mx-auto px-4 mt-8">
+        <Link
+          href="/guides/w2-vs-1099"
+          className="flex items-center gap-2 text-sm text-zinc-500 hover:text-indigo-400 transition-colors"
+        >
+          <span>Want the full breakdown?</span>
+          <span className="text-indigo-400 underline underline-offset-2">Read the W2 vs 1099 guide</span>
+          <ChevronRight size={14} />
+        </Link>
+      </div>
+
       {/* SEO Knowledge Layer Accordion */}
       <div className="max-w-4xl mx-auto px-4 mt-16">
         <TaxGuideAccordion 
