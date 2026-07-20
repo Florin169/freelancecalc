@@ -107,6 +107,18 @@ export default function Tax1099Page() {
         />
       </div>
 
+      {/* Calculate by State */}
+      <div className="max-w-4xl mx-auto px-4 mt-12">
+        <Link
+          href="/1099-tax-calculator/texas"
+          className="block bg-zinc-900/50 border border-zinc-800 rounded-xl px-6 py-4 text-center hover:border-indigo-500/50 transition-all duration-300 group"
+        >
+          <p className="text-zinc-300 group-hover:text-indigo-300 transition-colors font-medium">
+            Calculating taxes in Texas? See our Texas-specific guide <span className="text-indigo-400">&rarr;</span>
+          </p>
+        </Link>
+      </div>
+
       {/* Footer Note */}
       <div className="max-w-4xl mx-auto px-4 mt-12 text-center">
         <p className="text-xs text-zinc-600 font-mono">
