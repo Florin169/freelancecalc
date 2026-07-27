@@ -8,11 +8,13 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.calculatefreelance.com'),
   title: 'Freelance Tax Calculator 2025–2026 | 1099 & Self-Employment Tax',
   description: 'Free freelance tax calculator for 1099 contractors and self-employed workers. Estimate federal, state, and self-employment taxes for 2025–2026. Includes LLC savings and W2 comparison tools.',
   alternates: {
+    canonical: '/',
     languages: {
-      'en-US': 'https://calculatefreelance.com',
+      'en-US': 'https://www.calculatefreelance.com',
     },
   },
 };
@@ -41,11 +43,13 @@ export default function RootLayout({
              {/* Calculators */}
              <div>
                <p className="font-bold text-white mb-4 uppercase text-xs tracking-widest">Calculators</p>
-               <ul className="text-sm space-y-2">
-                 <li><Link href="/1099-tax-calculator" className="hover:text-white transition-colors">1099 Tax Estimator</Link></li>
-                 <li><Link href="/llc-tax-calculator" className="hover:text-white transition-colors">LLC Savings Calculator</Link></li>
-                 <li><Link href="/compare/1099-vs-w2" className="hover:text-white transition-colors">W2 vs 1099 Comparison</Link></li>
-               </ul>
+                <ul className="text-sm space-y-2">
+                  <li><Link href="/1099-tax-calculator" className="hover:text-white transition-colors">1099 Tax Estimator</Link></li>
+                  <li><Link href="/1099-tax-calculator/texas" className="hover:text-white transition-colors">1099 Calculator — Texas</Link></li>
+                  <li><Link href="/llc-tax-calculator" className="hover:text-white transition-colors">LLC Savings Calculator</Link></li>
+                  <li><Link href="/compare/1099-vs-w2" className="hover:text-white transition-colors">W2 vs 1099 Comparison</Link></li>
+                  <li><Link href="/guides/w2-vs-1099" className="hover:text-white transition-colors">W2 vs 1099 Guide</Link></li>
+                </ul>
              </div>
 
              {/* Tools */}

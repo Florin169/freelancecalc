@@ -166,12 +166,11 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
           <nav className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors mb-4">
             <Link href="/">← Back to Main Calculator</Link>
           </nav>
-          <h1 className="text-4xl font-extrabold text-white capitalize tracking-tight">
-            {displayName} Freelance Tax Calculator
+          <h1 className="text-4xl font-extrabold text-white tracking-tight">
+            {displayName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} Tax Calculator 2025–2026
           </h1>
           <p className="text-zinc-400 mt-2 max-w-2xl text-lg">
-            Professional 2026 tax breakdown specifically for {displayName}s. 
-            Includes 1099 self-employment tax, QBI deductions, and industry-standard overhead estimates.
+            Free 1099 tax calculator for freelance {displayName}s. Estimate your 2025–2026 federal, state, and self-employment taxes — including top deductions for your industry.
           </p>
         </header>
 
@@ -179,7 +178,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
 
         <section className="mt-16 bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 md:p-8 backdrop-blur-md">
           <h2 className="text-2xl font-bold text-white mb-6 tracking-tight">
-            {displayName} Tax Guide & Deductions
+            {displayName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} Tax Guide & Deductions 2025–2026
           </h2>
           <TaxGuideAccordion customData={accordionData} hideHeader />
         </section>

@@ -68,8 +68,29 @@ export default function Tax1099Page() {
         </Link>
       </div>
 
+      {/* Content Links */}
+      <div className="max-w-4xl mx-auto px-4 mt-6 flex flex-col sm:flex-row gap-3">
+        <Link
+          href="/guides/w2-vs-1099"
+          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
+        >
+          <span className="text-zinc-400">Comparing W2 vs 1099?</span>
+          <span className="text-indigo-400 group-hover:text-indigo-300">Read the full guide →</span>
+        </Link>
+        <Link
+          href="/1099-tax-calculator/texas"
+          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
+        >
+          <span className="text-zinc-400">Based in Texas?</span>
+          <span className="text-indigo-400 group-hover:text-indigo-300">See the Texas guide →</span>
+        </Link>
+      </div>
+
       {/* SEO Knowledge Layer Accordion */}
       <div className="max-w-4xl mx-auto px-4 mt-16">
+        <h2 className="text-xl font-bold text-white mb-6 tracking-tight max-w-4xl mx-auto px-4">
+          1099 Tax Guide: Common Questions Answered
+        </h2>
         <TaxGuideAccordion 
           hideHeader 
           customData={[

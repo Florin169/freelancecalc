@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '1099 Tax Calculator Texas 2025–2026 | Freelancer & Contractor Tax Estimator',
-  description: 'Free 1099 tax calculator for Texas freelancers and contractors. See exactly what you owe in federal and self-employment taxes — Texas has no state income tax, so your bill is lower than most states. Updated for 2026.',
+  description: 'Free 1099 tax calculator for Texas freelancers. Texas has no state income tax — see exactly what you owe in federal and self-employment taxes. Updated for 2026.',
 };
 
 export default function TexasPage() {

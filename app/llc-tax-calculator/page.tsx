@@ -69,6 +69,9 @@ export default function LLCPage() {
 
       {/* SEO Knowledge Layer Accordion */}
       <div className="max-w-4xl mx-auto px-4 mt-16">
+        <h2 className="text-xl font-bold text-white mb-6 tracking-tight max-w-4xl mx-auto px-4">
+          LLC Tax Savings Guide: S-Corp Election Explained
+        </h2>
         <TaxGuideAccordion 
           hideHeader 
           customData={[
