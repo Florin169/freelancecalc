@@ -50,6 +50,7 @@ export default function RootLayout({
                   <li><Link href="/llc-tax-calculator" className="hover:text-white transition-colors">LLC Savings Calculator</Link></li>
                   <li><Link href="/compare/1099-vs-w2" className="hover:text-white transition-colors">W2 vs 1099 Comparison</Link></li>
                   <li><Link href="/guides/w2-vs-1099" className="hover:text-white transition-colors">W2 vs 1099 Guide</Link></li>
+                  <li><Link href="/guides/graphic-designer-tax-deductions" className="hover:text-white transition-colors">Graphic Designer Tax Deductions</Link></li>
                 </ul>
              </div>
 

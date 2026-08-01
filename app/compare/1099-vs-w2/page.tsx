@@ -54,6 +54,14 @@ export default function ComparePage() {
           <span className="text-indigo-400 underline underline-offset-2">Read the W2 vs 1099 guide</span>
           <ChevronRight size={14} />
         </Link>
+        <Link
+          href="/guides/graphic-designer-tax-deductions"
+          className="flex items-center gap-2 text-sm text-zinc-500 hover:text-indigo-400 transition-colors"
+        >
+          <span>Graphic designer?</span>
+          <span className="text-indigo-400 underline underline-offset-2">Browse every design deduction</span>
+          <ChevronRight size={14} />
+        </Link>
       </div>
 
       {/* SEO Knowledge Layer Accordion */}

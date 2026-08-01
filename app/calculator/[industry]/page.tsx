@@ -172,6 +172,14 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
           <p className="text-zinc-400 mt-2 max-w-2xl text-lg">
             Free 1099 tax calculator for freelance {displayName}s. Estimate your 2025–2026 federal, state, and self-employment taxes — including top deductions for your industry.
           </p>
+          {industrySlug === 'graphic-designer' && (
+            <Link
+              href="/guides/graphic-designer-tax-deductions"
+              className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 mt-4 transition-colors"
+            >
+              Read the full graphic designer tax deductions guide →
+            </Link>
+          )}
         </header>
 
         <TaxCalculator />

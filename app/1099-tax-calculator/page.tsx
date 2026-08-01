@@ -69,35 +69,55 @@ export default function Tax1099Page() {
       </div>
 
       {/* Content Links */}
-      <div className="max-w-4xl mx-auto px-4 mt-6 flex flex-col sm:flex-row gap-3">
-        <Link
-          href="/guides/w2-vs-1099"
-          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
-        >
-          <span className="text-zinc-400">Comparing W2 vs 1099?</span>
-          <span className="text-indigo-400 group-hover:text-indigo-300">Read the full guide →</span>
-        </Link>
-        <Link
-          href="/1099-tax-calculator/texas"
-          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
-        >
-          <span className="text-zinc-400">Based in Texas?</span>
-          <span className="text-indigo-400 group-hover:text-indigo-300">See the Texas guide →</span>
-        </Link>
-        <Link
-          href="/1099-tax-calculator/california"
-          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
-        >
-          <span className="text-zinc-400">Based in California?</span>
-          <span className="text-indigo-400 group-hover:text-indigo-300">See the California guide →</span>
-        </Link>
-        <Link
-          href="/1099-tax-calculator/florida"
-          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
-        >
-          <span className="text-zinc-400">Based in Florida?</span>
-          <span className="text-indigo-400 group-hover:text-indigo-300">See the Florida guide →</span>
-        </Link>
+      <div className="max-w-4xl mx-auto px-4 mt-6">
+        <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 sm:p-6">
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-3">
+                Deduction guides
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  href="/guides/w2-vs-1099"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  W2 vs 1099
+                </Link>
+                <Link
+                  href="/guides/graphic-designer-tax-deductions"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  Graphic Designer Deductions
+                </Link>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-3">
+                State guides
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  href="/1099-tax-calculator/texas"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  Texas guide
+                </Link>
+                <Link
+                  href="/1099-tax-calculator/california"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  California guide
+                </Link>
+                <Link
+                  href="/1099-tax-calculator/florida"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  Florida guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* SEO Knowledge Layer Accordion */}
