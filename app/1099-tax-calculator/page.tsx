@@ -91,6 +91,13 @@ export default function Tax1099Page() {
           <span className="text-zinc-400">Based in California?</span>
           <span className="text-indigo-400 group-hover:text-indigo-300">See the California guide →</span>
         </Link>
+        <Link
+          href="/1099-tax-calculator/florida"
+          className="flex items-center gap-2 text-sm bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 hover:border-indigo-500/50 transition-colors group"
+        >
+          <span className="text-zinc-400">Based in Florida?</span>
+          <span className="text-indigo-400 group-hover:text-indigo-300">See the Florida guide →</span>
+        </Link>
       </div>
 
       {/* SEO Knowledge Layer Accordion */}
@@ -109,7 +116,7 @@ export default function Tax1099Page() {
             {
               id: 'tax-rate-2026',
               title: 'What is the 1099 tax rate in 2026?',
-              content: `The Self-Employment tax rate for 2026 is 15.3% — 12.4% for Social Security and 2.9% for Medicare. The Social Security portion applies only up to the 2026 wage base limit; Medicare applies to all earnings. High earners pay an additional 0.9% Medicare surtax above $200,000.`,
+              content: `The Self-Employment tax rate for 2026 is 15.3% — 12.4% for Social Security and 2.9% for Medicare. The Social Security portion applies only up to the 2026 wage base limit of $184,500 (up from $176,100 in 2025); Medicare applies to all earnings. High earners pay an additional 0.9% Medicare surtax above $200,000.`,
             },
             {
               id: 'set-aside-30',
@@ -151,6 +158,14 @@ export default function Tax1099Page() {
         >
           <p className="text-zinc-300 group-hover:text-indigo-300 transition-colors font-medium">
             Calculating taxes in California? See our California-specific guide <span className="text-indigo-400">&rarr;</span>
+          </p>
+        </Link>
+        <Link
+          href="/1099-tax-calculator/florida"
+          className="block bg-zinc-900/50 border border-zinc-800 rounded-xl px-6 py-4 text-center hover:border-indigo-500/50 transition-all duration-300 group"
+        >
+          <p className="text-zinc-300 group-hover:text-indigo-300 transition-colors font-medium">
+            Calculating taxes in Florida? See our Florida-specific guide <span className="text-indigo-400">&rarr;</span>
           </p>
         </Link>
       </div>
