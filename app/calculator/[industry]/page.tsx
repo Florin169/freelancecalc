@@ -180,6 +180,14 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
               Read the full graphic designer tax deductions guide →
             </Link>
           )}
+          {industrySlug === 'copywriter' && (
+            <Link
+              href="/guides/copywriter-tax-deductions"
+              className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 mt-4 transition-colors"
+            >
+              Read the full copywriter tax deductions guide →
+            </Link>
+          )}
         </header>
 
         <TaxCalculator />

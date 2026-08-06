@@ -47,10 +47,12 @@ export default function RootLayout({
                   <li><Link href="/1099-tax-calculator/texas" className="hover:text-white transition-colors">1099 Calculator — Texas</Link></li>
                   <li><Link href="/1099-tax-calculator/california" className="hover:text-white transition-colors">1099 Calculator — California</Link></li>
                   <li><Link href="/1099-tax-calculator/florida" className="hover:text-white transition-colors">1099 Calculator — Florida</Link></li>
+                  <li><Link href="/1099-tax-calculator/new-york" className="hover:text-white transition-colors">1099 Calculator — New York</Link></li>
                   <li><Link href="/llc-tax-calculator" className="hover:text-white transition-colors">LLC Savings Calculator</Link></li>
                   <li><Link href="/compare/1099-vs-w2" className="hover:text-white transition-colors">W2 vs 1099 Comparison</Link></li>
                   <li><Link href="/guides/w2-vs-1099" className="hover:text-white transition-colors">W2 vs 1099 Guide</Link></li>
                   <li><Link href="/guides/graphic-designer-tax-deductions" className="hover:text-white transition-colors">Graphic Designer Tax Deductions</Link></li>
+                  <li><Link href="/guides/copywriter-tax-deductions" className="hover:text-white transition-colors">Copywriter Tax Deductions</Link></li>
                 </ul>
              </div>
 
