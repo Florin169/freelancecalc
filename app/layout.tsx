@@ -48,6 +48,7 @@ export default function RootLayout({
                   <li><Link href="/1099-tax-calculator/california" className="hover:text-white transition-colors">1099 Calculator — California</Link></li>
                   <li><Link href="/1099-tax-calculator/florida" className="hover:text-white transition-colors">1099 Calculator — Florida</Link></li>
                   <li><Link href="/1099-tax-calculator/new-york" className="hover:text-white transition-colors">1099 Calculator — New York</Link></li>
+                  <li><Link href="/1099-tax-calculator/illinois" className="hover:text-white transition-colors">1099 Calculator — Illinois</Link></li>
                   <li><Link href="/llc-tax-calculator" className="hover:text-white transition-colors">LLC Savings Calculator</Link></li>
                   <li><Link href="/compare/1099-vs-w2" className="hover:text-white transition-colors">W2 vs 1099 Comparison</Link></li>
                   <li><Link href="/guides/w2-vs-1099" className="hover:text-white transition-colors">W2 vs 1099 Guide</Link></li>

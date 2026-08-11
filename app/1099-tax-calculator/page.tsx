@@ -126,6 +126,12 @@ export default function Tax1099Page() {
                 >
                   New York guide
                 </Link>
+                <Link
+                  href="/1099-tax-calculator/illinois"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  Illinois guide
+                </Link>
               </div>
             </div>
           </div>
@@ -206,6 +212,14 @@ export default function Tax1099Page() {
         >
           <p className="text-zinc-300 group-hover:text-indigo-300 transition-colors font-medium">
             Calculating taxes in New York? See our New York-specific guide <span className="text-indigo-400">&rarr;</span>
+          </p>
+        </Link>
+        <Link
+          href="/1099-tax-calculator/illinois"
+          className="block bg-zinc-900/50 border border-zinc-800 rounded-xl px-6 py-4 text-center hover:border-indigo-500/50 transition-all duration-300 group"
+        >
+          <p className="text-zinc-300 group-hover:text-indigo-300 transition-colors font-medium">
+            Calculating taxes in Illinois? See our Illinois-specific guide <span className="text-indigo-400">&rarr;</span>
           </p>
         </Link>
       </div>
