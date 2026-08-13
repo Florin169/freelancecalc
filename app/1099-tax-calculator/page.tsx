@@ -95,6 +95,12 @@ export default function Tax1099Page() {
                 >
                   Copywriter Deductions
                 </Link>
+                <Link
+                  href="/guides/web-developer-tax-deductions"
+                  className="text-sm text-zinc-300 hover:text-indigo-300 bg-zinc-800/60 border border-zinc-700 rounded-full px-3 py-1.5 transition-colors"
+                >
+                  Web Developer Deductions
+                </Link>
               </div>
             </div>
             <div>

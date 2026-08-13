@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Link from 'next/link'
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,6 +55,7 @@ export default function RootLayout({
                   <li><Link href="/guides/w2-vs-1099" className="hover:text-white transition-colors">W2 vs 1099 Guide</Link></li>
                   <li><Link href="/guides/graphic-designer-tax-deductions" className="hover:text-white transition-colors">Graphic Designer Tax Deductions</Link></li>
                   <li><Link href="/guides/copywriter-tax-deductions" className="hover:text-white transition-colors">Copywriter Tax Deductions</Link></li>
+                  <li><Link href="/guides/web-developer-tax-deductions" className="hover:text-white transition-colors">Web Developer Tax Deductions</Link></li>
                 </ul>
              </div>
 
@@ -75,6 +77,7 @@ export default function RootLayout({
              </div>
            </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
