@@ -15,7 +15,8 @@ export default function Home() {
     { name: 'Web Developer', slug: 'web-developer' },
     { name: 'Copywriter', slug: 'copywriter' },
     { name: 'Social Media Manager', slug: 'social-media-manager' },
-    { name: 'UX Designer', slug: 'ux-designer' }
+    { name: 'UX Designer', slug: 'ux-designer' },
+    { name: 'Physician', slug: 'physician' }
   ];
 
   return (

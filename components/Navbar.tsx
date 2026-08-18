@@ -12,6 +12,7 @@ export default function Navbar() {
   const tools = [
     { name: '1099 Calculator', href: '/1099-tax-calculator' },
     { name: 'LLC Savings', href: '/llc-tax-calculator' },
+    { name: 'Physician Calculator', href: '/calculator/physician' },
     { name: 'W2 vs 1099', href: '/compare/1099-vs-w2' },
   ];
 

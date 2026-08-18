@@ -12,8 +12,15 @@ export default function ComparePage() {
   return (
     <main className="bg-black text-zinc-50 min-h-screen pb-20 antialiased">
       {/* Breadcrumb */}
-      <div className="max-w-4xl mx-auto px-4 pt-8">
-        <nav className="flex items-center gap-2 text-sm text-zinc-500">
+      
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden border-b border-zinc-800 bg-black">
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/40 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="relative max-w-4xl mx-auto px-4 pt-6 md:pt-8">
+<nav className="flex items-center gap-2 text-sm text-zinc-500">
           <Link href="/" className="hover:text-zinc-300 transition-colors">
             Home
           </Link>
@@ -22,12 +29,7 @@ export default function ComparePage() {
         </nav>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-zinc-800 bg-black">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/40 to-transparent pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none" />
-        
-        <div className="relative max-w-4xl mx-auto text-center px-6 py-12 md:py-24">
+      <div className="relative max-w-4xl mx-auto text-center px-6 py-12 md:py-24">
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1.1]">
             W2 vs. 1099 Calculator: <br />
             <span className="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">Compare Salary vs. Freelance Pay</span>
