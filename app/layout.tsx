@@ -10,12 +10,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.calculatefreelance.com'),
   title: 'Freelance Tax Calculator 2025–2026 | 1099 & Self-Employment Tax',
   description: 'Free freelance tax calculator for 1099 contractors and self-employed workers. Estimate federal, state, and self-employment taxes for 2025–2026. Includes LLC savings and W2 comparison tools.',
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': 'https://www.calculatefreelance.com',
-    },
-  },
 };
 
 export default function RootLayout({
